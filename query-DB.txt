@@ -20,6 +20,8 @@ SELECT *, YEAR(CURDATE()) AS actual_year, YEAR(`date_of_birth`) AS birth_year,( 
 FROM	`students`
 WHERE ( (YEAR(CURDATE())) - (YEAR(`date_of_birth`)) ) > 30
 
+correzione:
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30
 ---------------------------------------------------------------------
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
@@ -61,5 +63,6 @@ SELECT *
 FROM `teachers`
 WHERE `phone` IS NULL
 
-
+correzione
+SELECT COUNT(*)
 
