@@ -1,0 +1,28 @@
+ESERCIZIO 1
+
+SELECT COUNT(*), YEAR (`enrolment_date`)
+FROM `students`
+GROUP BY YEAR (`enrolment_date`)
+
+-----------------------------------------------------------------
+ESERCIZIO 2
+
+SELECT COUNT(*) AS `total_teachers`, `office_address`
+FROM `teachers`
+GROUP BY `office_address`
+
+-----------------------------------------------------------------
+ESERCIZIO 3
+
+SELECT COUNT(*), `exam_id`, AVG (`vote`) AS votes_avarage
+FROM `exam_student`
+GROUP BY `exam_id`
+
+-----------------------------------------------------------------
+ESERCIZIO 4
+
+SELECT COUNT(*) AS `total`, `department_id`
+FROM `degrees`
+GROUP BY `department_id`
+
+-----------------------------------------------------------------
